@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap";
 
-$black: #000000;
+$black: #191A23;
 $white: #FFFFFF;
+$gray: #F3F3F3;
+$neon: #B9FF66;
 
 $primary: $black;
 // pink: pink;
@@ -18,23 +20,10 @@ $primary: $black;
     font-family: "Space Grotesk", sans-serif;
 }
 
-.main-container {
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.btn-outline-primary {
-    padding: 20px 35px;
-    background-color: $white;
-    border: $primary 1px solid;
-    border-radius: 10px;
-    font-size: 20px;
-
-    &:hover {
-        background-color: $primary;
-        color: $white;
-    }
-}
+// NAVBAR
+// .navbar {
+//     padding: 1rem 0.25rem;
+// }
 
 // .nav-item {
     
@@ -42,6 +31,200 @@ $primary: $black;
 .navbar-nav {
     li:not(:last-child) {
         margin-right: 20px;
-        font-size: 20px;
+        font-size: 17px;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+// END OF NAVBAR
+
+h1 {
+    font-size: 57px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+p {
+    font-size: 17px;
+}
+
+.txt-pill {
+    padding: 3px 10px; 
+    width: fit-content;
+    border-radius: 7px;
+
+    &.txt-neon {
+        background-color: $neon;
+        color: $black;
+    }
+
+    &.txt-white {
+        background-color: $white;
+        color: $black;
+    }    
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 20px 35px;
+    font-size: 17px;
+    border-radius: 10px;
+
+    &.btn-outline-primary {
+        background-color: $white;
+        border: $primary 1px solid;
+    
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+    &.btn-primary {
+        background-color: $primary;
+        color: $white;        
+        border: $primary 1px solid;
+
+        &:hover {
+            background-color: #353535;
+            border-color: #353535;
+        }
+    }
+}
+
+.btn-link {
+    // position: absolute;
+    // bottom: 40px;
+    width: fit-content;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+
+    .icon {
+        display: inline-block;
+        width: 37px;
+        height: 37px;
+        background-size: 37px 37px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50px;
+
+        &.ic-arrow-neon {
+            background-image: url(../src/assets/img/arrow-neon.png);
+        }
+
+        &.ic-arrow-black {
+            background-image: url(../src/assets/img/arrow-black.png);
+        }
+    }
+
+    span {
+        font-size: 19px;
+    }
+
+    &.floating {
+        position: absolute;
+        bottom: 40px;
+    }
+}
+
+.card {
+    padding: 35px;
+    border: solid $black 1px;
+    border-radius: 45px;
+    border-bottom: solid $black 4px;
+
+    img {
+        float: right;
+        margin: auto;
+    }
+
+    .card-content {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .card-bottom {
+        margin: 30px 0px;
+    }
+
+    &.border-none {
+        border: none!important;
+    }
+
+    &.fix-height {
+        height: 310px;
+    }
+
+    .img-smiley {
+        position: absolute;
+        right: 3rem;
+        width: 300px;
+        transform: translateY(-20%);
+       
+    }
+
+    &.card-left {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    &.card-middle {
+        border-radius: 0px!important;
+    }
+
+    &.card-right {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+.bg-gray {
+    background-color: $gray;
+}
+
+.bg-neon {
+    background-color: $neon;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+.txt-white {
+    color: $white;
+}
+
+.txt-black {
+    color: $black;
+}
+
+.txt-neon {
+    color: $neon;
+}
+
+@media only screen and (max-width: 767.9px) {
+    .card-bottom {
+        margin: 80px 0px 0px 0px!important;
+    }
+
+    .card {
+        img {
+            width: 165px;
+        }
     }
 }
