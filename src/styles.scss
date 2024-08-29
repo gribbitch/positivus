@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap";
+
+$black: #000000;
+$white: #FFFFFF;
+
+$primary: $black;
+// pink: pink;
+
+// $theme-colors: (
+//   "primary": pink,
+//   "danger": #ff4136
+// );
+
+// @import "node_modules/bootstrap/scss/bootstrap";
+
+* {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.main-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.btn-outline-primary {
+    padding: 20px 35px;
+    background-color: $white;
+    border: $primary 1px solid;
+    border-radius: 10px;
+    font-size: 20px;
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+// .nav-item {
+    
+// }
+.navbar-nav {
+    li:not(:last-child) {
+        margin-right: 20px;
+        font-size: 20px;
+    }
+}
